@@ -22,7 +22,7 @@
 </table>
 <script type="text/javascript">
 $(document).ready(function(){
-	$.getJSON("https://54a0-218-253-141-203.ngrok-free.app/events", function(result){
+	$.getJSON("https://swire-tssd-8d7e704ced6d.herokuapp.com/events", function(result){
 		console.log(result["dataList"])
     $.each(result["dataList"], function(i, field){
     	//render each row
@@ -34,7 +34,7 @@ $(document).ready(function(){
      		console.log($("textarea#text-" + field["id"]).val());
 
 				$.ajax({
-				  url: "https://54a0-218-253-141-203.ngrok-free.app/extensiondata",
+				  url: "https://swire-tssd-8d7e704ced6d.herokuapp.com/extensiondata",
 				  type: "POST",
 				  headers: {
 				    "Content-Type": "application/json",
